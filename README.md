@@ -10,6 +10,7 @@
 - [Inscribir-participantes](#Inscribir-participantes)
 - [Registrar-puntajes](#Registrar-puntajes)
 - [Mostrar-ranking](#Mostrar-ranking)
+- [Amenzas por función:](#Amenzas-por-función:)
 
 
 ## Introducción:
@@ -51,7 +52,23 @@
 ![alt text](images/ranking.png)
 
 ## Amenzas por función.
+### Asignar jueces - Spoofing.
 
+Un atacante podría suplantar la identidad de un funcionario autorizado y asignar jueces a un torneo sin autorización
+
+**Damage (8):** La asignación de jueces no autorizados puede afectar la legitimidad y credibilidad del torneo.
+
+**Reproducibility (7):** Una vez que el atacante consigue los datos de autenticación del funcionario, podría realizar este ataque repetidamente.
+
+**Exploitability (5):** Este ataque es posible si no se implementan controles de autenticación robustos.
+
+**Affected users (6):** Los organizadores y participantes se verían afectados, ya que el torneo podría ser manipulado.
+
+**Discoverability (4):** Podría pasar desapercibido si no se revisan los registros de asignación.
+
+**Riesgo total:** 30/5 = 6,0
+
+**Mitigación:** Implementar autenticación de dos factores para los funcionarios y registros de auditoría detallados para todas las asignaciones de jueces. 
 
 ### Crear torneos - Elevation of Privilege.
 
@@ -109,23 +126,7 @@ Un juez podría negar que asignó un puntaje a un participante.
 
 **Mitigación:** Autenticación de jueces utilizando certificados digitales o biometría para garantizar que solo jueces autorizados puedan registrar puntajes.
 
-### Asignar jueces - Spoofing.
 
-Un atacante podría suplantar la identidad de un funcionario autorizado y asignar jueces a un torneo sin autorización
-
-**Damage (8):** La asignación de jueces no autorizados puede afectar la legitimidad y credibilidad del torneo.
-
-**Reproducibility (7):** Una vez que el atacante consigue los datos de autenticación del funcionario, podría realizar este ataque repetidamente.
-
-**Exploitability (5):** Este ataque es posible si no se implementan controles de autenticación robustos.
-
-**Affected users (6):** Los organizadores y participantes se verían afectados, ya que el torneo podría ser manipulado.
-
-**Discoverability (4):** Podría pasar desapercibido si no se revisan los registros de asignación.
-
-**Riesgo total:** 30/5 = 6,0
-
-**Mitigación:** Implementar autenticación de dos factores para los funcionarios y registros de auditoría detallados para todas las asignaciones de jueces. 
 
 ### Inscribir participantes - Tampering.
 
