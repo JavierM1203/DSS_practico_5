@@ -2,14 +2,14 @@
 # Índice
 
 - [Introducción](#introducción)
-- [Funciones-seleccionadas](#Funciones-Seleccionadas:)
+- [Funciones-Seleccionadas](#Funciones-Seleccionadas:)
 - [Diagrama-de-flujo-de-datos-de-alto-nivel:](#Diagrama-de-flujo-de-datos-de-alto-nivel:)
 - [Diagrama-de-flujo-de-datos-de-segundo-nivel-por-función:](#Diagrama-de-flujo-de-datos-de-segundo-nivel-por-función:)
 - [Crear-torneos](#Crear-torneos)
-- [DFD Asignar jueces](#Asignar-jueces)
-- [DFD Inscribir participantes](#Inscribir-participantes)
-- [DFD Registrar puntajes](#Registrar-puntajes)
-- [DFD Mostrar ranking](#Mostrar-ranking)
+- [Asignar-jueces](#Asignar-jueces)
+- [#Inscribir-participantes](#Inscribir-participantes)
+- [#Registrar-puntajes](#Registrar-puntajes)
+- [#Mostrar-ranking](#Mostrar-ranking)
 
 
 ## Introducción:
