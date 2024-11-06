@@ -51,6 +51,7 @@
 
 ![alt text](images/ranking.png)
 
+
 ## Amenzas por función.
 ### Asignar jueces - Spoofing.
 
@@ -70,24 +71,6 @@ Un atacante podría suplantar la identidad de un funcionario autorizado y asigna
 
 **Mitigación:** Implementar autenticación de dos factores para los funcionarios y registros de auditoría detallados para todas las asignaciones de jueces. 
 
-### Crear torneos - Elevation of Privilege.
-
-Un atacante podría modificar sus privilegios para crear torneos.
-
-**Damage (9):** Un atacante podría crear torneos no autorizados y afectar la información mostrada al público.
-
-**Reproducibility (8):** Si se encuentran vulnerabilidades de escalamiento de privilegios, este ataque podría repetirse fácilmente.
-
-**Exploitability (6):** Se requiere encontrar una vulnerabilidad de escalamiento, lo que podría no ser tan complejo si no se han implementado buenas prácticas de seguridad.
-
-**Affected users (6):** Los participantes del torneo se verían afectados.
-
-**Discoverability (4):** Este ataque podría no ser inmediatamente evidente, especialmente si los torneos son creados de forma encubierta.
-
-**Riesgo total:** 33/5 = 6,6
-
-**Mitigación:** Verificar los controles de acceso en el servidor, no solo en el cliente. Esto evita que los usuarios intenten obtener accesos adicionales manipulando el lado del cliente.
-
 
 ### Registrar puntajes - Tampering.
 
@@ -106,6 +89,7 @@ Un atacante podría alterar los puntajes enviados por la aplicación.
 **Riesgo total:** 32/5 = 6,4
 
 **Mitigación:** Asegurar que la aplicación Android utilice cifrado completo de las comunicaciones con la API para evitar la interceptación de puntajes.
+Implementar alertas automáticas que notifiquen cambios inusuales en los puntajes, y auditorías en tiempo real que revisen la integridad de los datos.
 
 
 ### Registrar puntajes - Repudiation.
@@ -125,26 +109,25 @@ Un juez podría negar que asignó un puntaje a un participante.
 **Riesgo total:** 34/5 = 6,8
 
 **Mitigación:** Autenticación de jueces utilizando certificados digitales o biometría para garantizar que solo jueces autorizados puedan registrar puntajes.
+Cada acción realizada por los jueces debe registrarse con un identificador único y una marca de tiempo, lo cual permite rastrear quién asignó cada puntaje.
+
+### Inscribir participantes - Denegación de Servicio (DoS): 
+Un atacante podría sobrecargar el sistema de inscripción, impidiendo que los usuarios legítimos completen el proceso.
+
+**Damage (6):** Si el sistema de inscripción queda fuera de servicio, los participantes legítimos no podrán inscribirse, afectando el desarrollo del torneo. Esto impactaría la integridad y la disponibilidad del sistema, aunque el daño directo a los datos es limitado.
+
+**Reproducibility (5):** Un ataque de denegación de servicio puede ser replicado fácilmente si se encuentra un punto débil en la infraestructura o configuración del sistema.
+
+**Exploitability (6):** Dependiendo de la arquitectura y medidas de seguridad, un atacante podría explotar esta vulnerabilidad enviando una gran cantidad de solicitudes de inscripción.
+
+**Affected users (6):** Afecta a todos los participantes y usuarios legítimos que intenten utilizar el sistema de inscripción durante el ataque, ya que el sistema no estará disponible.
+
+**Discoverability (5):** Un ataque DoS suele ser evidente cuando el sistema comienza a tener problemas de rendimiento o queda completamente fuera de servicio, aunque identificar el origen puede ser complicado.
+
+Riesgo total: 28/5 = 5,6
+**Mitigación:** Limitar la cantidad de solicitudes permitidas por usuario en un intervalo de tiempo específico, para prevenir que un solo usuario  realice múltiples solicitudes en un corto período. Implementar un sistema de CAPTCHA en el formulario de inscripción para evitar que bots o scripts automáticos generen múltiples solicitudes de inscripción simultáneamente.
 
 
-
-### Inscribir participantes - Tampering.
-
-Un atacante podría manipular los datos de los participantes, inscribiendo a personas que no cumplen con los requisitos para competir.
-
-**Damage (7):** Los participantes no autorizados pueden afectar la competitividad del torneo y su legitimidad.
-
-**Reproducibility (6):** Si existe una vulnerabilidad en el sistema, el ataque puede repetirse fácilmente
-
-**Exploitability (6):** El ataque es factible si los datos de los participantes no están protegidos adecuadamente.
-
-**Affected users (7):**Todos los participantes y organizadores del torneo se ven afectados.
-
-**Discoverability (5):**  Puede ser difícil detectar manipulación si no se realizan revisiones de los datos.
-
-**Riesgo total:** 31/5 = 6,2
-
-**Mitigación:**Asegurar que la API REST valide y registre todas las inscripciones y verificar los datos de los participantes en el sistema de Gestión de Federados.
 
 ### Mostrar ranking - Information Disclosure.
 
@@ -163,6 +146,25 @@ Un atacante podría obtener acceso no autorizado a los datos del ranking, exponi
 **Riesgo total:** 27/5 = 5,4
 
 **Mitigación:** Restringir el acceso a los datos del ranking a usuarios autorizados y utilizar cifrado en las comunicaciones y el almacenamiento de datos sensibles. 
+
+
+### Crear torneos - Elevation of Privilege.
+
+Un atacante podría modificar sus privilegios para crear torneos.
+
+**Damage (9):** Un atacante podría crear torneos no autorizados y afectar la información mostrada al público.
+
+**Reproducibility (8):** Si se encuentran vulnerabilidades de escalamiento de privilegios, este ataque podría repetirse fácilmente.
+
+**Exploitability (6):** Se requiere encontrar una vulnerabilidad de escalamiento, lo que podría no ser tan complejo si no se han implementado buenas prácticas de seguridad.
+
+**Affected users (6):** Los participantes del torneo se verían afectados.
+
+**Discoverability (4):** Este ataque podría no ser inmediatamente evidente, especialmente si los torneos son creados de forma encubierta.
+
+**Riesgo total:** 33/5 = 6,6
+
+**Mitigación:** Verificar los controles de acceso en el servidor, no solo en el cliente. Esto evita que los usuarios intenten obtener accesos adicionales manipulando el lado del cliente. Respetar el Principio de Mínimo Privilegios, configurar los permisos de usuario de manera que solo los roles absolutamente necesarios puedan crear torneos.
 
 
 
