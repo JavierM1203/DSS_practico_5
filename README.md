@@ -1,11 +1,11 @@
 ﻿# Practico 5
 # Índice
 
-- [Funciones seleccionadas](#Introducción:)
-- [Funciones seleccionadas](#Funciones-Seleccionadas:)
-- [DFD Alto nivel](#Diagrama-de-flujo-de-datos-de-alto-nivel:)
-- [DFD Segundo nivel por función](#Diagrama-de-flujo-de-datos-de-segundo-nivel-por-función:)
-- [DFD Crear torneos](#Crear-torneos)
+- [Introducción](#introducción)
+- [Funciones-seleccionadas](#Funciones-Seleccionadas:)
+- [Diagrama-de-flujo-de-datos-de-alto-nivel:](#Diagrama-de-flujo-de-datos-de-alto-nivel:)
+- [Diagrama-de-flujo-de-datos-de-segundo-nivel-por-función:](#Diagrama-de-flujo-de-datos-de-segundo-nivel-por-función:)
+- [Crear-torneos](#Crear-torneos)
 - [DFD Asignar jueces](#Asignar-jueces)
 - [DFD Inscribir participantes](#Inscribir-participantes)
 - [DFD Registrar puntajes](#Registrar-puntajes)
