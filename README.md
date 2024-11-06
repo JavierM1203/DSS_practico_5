@@ -2,7 +2,7 @@
 # Índice
 
 - [Introducción](#introducción)
-- [Funciones-Seleccionadas](#Funciones-Seleccionadas:)
+- [Funciones-Seleccionadas:](#Funciones-Seleccionadas:)
 - [Diagrama-de-flujo-de-datos-de-alto-nivel:](#Diagrama-de-flujo-de-datos-de-alto-nivel:)
 - [Diagrama-de-flujo-de-datos-de-segundo-nivel-por-función:](#Diagrama-de-flujo-de-datos-de-segundo-nivel-por-función:)
 - [Crear-torneos](#Crear-torneos)
