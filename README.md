@@ -144,7 +144,7 @@ Un atacante podría obtener acceso no autorizado a los datos del ranking, exponi
 
 
 ### Inscribir participantes: Denegación de Servicio (DoS): 
-Un atacante podría sobrecargar el sistema de inscripción, impidiendo que los usuarios legítimos completen el proceso.
+Un atacante podría sobrecargar el sistema de inscripción, impidiendo que se puedan inscribir a lor participantes legítimos.
 
 **Damage (6):** Si el sistema de inscripción queda fuera de servicio, los participantes legítimos no podrán inscribirse, afectando el desarrollo del torneo. Esto impactaría la integridad y la disponibilidad del sistema, aunque el daño directo a los datos es limitado.
 
@@ -152,7 +152,7 @@ Un atacante podría sobrecargar el sistema de inscripción, impidiendo que los u
 
 **Exploitability (6):** Dependiendo de la arquitectura y medidas de seguridad, un atacante podría explotar esta vulnerabilidad enviando una gran cantidad de solicitudes de inscripción.
 
-**Affected users (6):** Afecta a todos los participantes y usuarios legítimos que intenten utilizar el sistema de inscripción durante el ataque, ya que el sistema no estará disponible.
+**Affected users (6):** Afecta a todos los participantes y a los funcionarios  que intenten utilizar el sistema de inscripción durante el ataque, ya que el sistema no estará disponible.
 
 **Discoverability (5):** Un ataque DoS suele ser evidente cuando el sistema comienza a tener problemas de rendimiento o queda completamente fuera de servicio, aunque identificar el origen puede ser complicado.
 
