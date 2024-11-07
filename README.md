@@ -11,15 +11,14 @@
 - [Registrar puntajes](#Registrar-puntajes)
 - [Mostrar ranking](#Mostrar-ranking)
 - [Amenzas por función:](#Amenzas-por-función:)
-
 - [Asignar jueces: Spoofing:](#Asignar-jueces:-Spoofing:)
+- [Registrar puntajes - Tampering:](#Registrar-puntajes:-Tampering:)
+- [Registrar puntajes - Repudiation:](#Registrar-puntajes:-Repudiation)
+- [Mostrar ranking - Information Disclosure:](#Mostrar-ranking:-Information-Disclosure:)
+- [Inscribir participantes - Denegación de Servicio (DoS):](#Inscribir-participantes:-Denegación-de-Servicio-(DoS):)
+- [Crear torneos - Elevation of Privilege:](#Crear-torneos:-Elevation-of-Privilege:)
 
-### 
-### Registrar puntajes - Tampering:
-### Registrar puntajes - Repudiation.
-### Mostrar ranking - Information Disclosure:
-### Inscribir participantes - Denegación de Servicio (DoS): 
-### Crear torneos - Elevation of Privilege:
+
 
 ## Introducción:
 
