@@ -156,7 +156,8 @@ Un atacante podría sobrecargar el sistema de inscripción, impidiendo que los u
 
 **Discoverability (5):** Un ataque DoS suele ser evidente cuando el sistema comienza a tener problemas de rendimiento o queda completamente fuera de servicio, aunque identificar el origen puede ser complicado.
 
-Riesgo total: 28/5 = 5,6
+Riesgo total: 28/5 = 5,6  
+
 **Mitigación:** Limitar la cantidad de solicitudes permitidas por usuario en un intervalo de tiempo específico, para prevenir que un solo usuario  realice múltiples solicitudes en un corto período. Implementar un sistema de CAPTCHA en el formulario de inscripción para evitar que bots o scripts automáticos generen múltiples solicitudes de inscripción simultáneamente.
 
 
