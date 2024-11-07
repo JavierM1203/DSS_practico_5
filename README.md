@@ -12,7 +12,7 @@
 - [Mostrar-ranking](#Mostrar-ranking)
 - [Amenzas por función:](#Amenzas-por-función:)
 
-- [Amenzas por función:](#Asignar-jueces-Spoofing:)
+- [Asignar jueces: Spoofing:](#Asignar-jueces:-Spoofing:)
 
 ### 
 ### Registrar puntajes - Tampering:
@@ -60,8 +60,8 @@
 ![alt text](images/ranking.png)
 
 
-## Amenzas por función.
-### Asignar jueces - Spoofing:
+## Amenzas por función:
+### Asignar jueces: Spoofing:
 
 Un atacante podría suplantar la identidad de un funcionario autorizado y asignar jueces a un torneo sin autorización
 
@@ -80,7 +80,7 @@ Un atacante podría suplantar la identidad de un funcionario autorizado y asigna
 **Mitigación:** Implementar autenticación de dos factores para los funcionarios y registros de auditoría detallados para todas las asignaciones de jueces. 
 
 
-### Registrar puntajes - Tampering:
+### Registrar puntajes: Tampering:
 
 Un atacante podría alterar los puntajes enviados por la aplicación.
 
@@ -100,7 +100,7 @@ Un atacante podría alterar los puntajes enviados por la aplicación.
 Implementar alertas automáticas que notifiquen cambios inusuales en los puntajes, y auditorías en tiempo real que revisen la integridad de los datos.
 
 
-### Registrar puntajes - Repudiation.
+### Registrar puntajes: Repudiation:
 
 Un juez podría negar que asignó un puntaje a un participante.
 
@@ -120,7 +120,7 @@ Un juez podría negar que asignó un puntaje a un participante.
 Cada acción realizada por los jueces debe registrarse con un identificador único y una marca de tiempo, lo cual permite rastrear quién asignó cada puntaje.
 
 
-### Mostrar ranking - Information Disclosure:
+### Mostrar ranking: Information Disclosure:
 
 Un atacante podría obtener acceso no autorizado a los datos del ranking, exponiendo la información de puntajes antes de su publicación oficial.
 
@@ -139,7 +139,7 @@ Un atacante podría obtener acceso no autorizado a los datos del ranking, exponi
 **Mitigación:** Restringir el acceso a los datos del ranking a usuarios autorizados y utilizar cifrado en las comunicaciones y el almacenamiento de datos sensibles. 
 
 
-### Inscribir participantes - Denegación de Servicio (DoS): 
+### Inscribir participantes: Denegación de Servicio (DoS): 
 Un atacante podría sobrecargar el sistema de inscripción, impidiendo que los usuarios legítimos completen el proceso.
 
 **Damage (6):** Si el sistema de inscripción queda fuera de servicio, los participantes legítimos no podrán inscribirse, afectando el desarrollo del torneo. Esto impactaría la integridad y la disponibilidad del sistema, aunque el daño directo a los datos es limitado.
@@ -158,7 +158,7 @@ Riesgo total: 28/5 = 5,6
 
 
 
-### Crear torneos - Elevation of Privilege:
+### Crear torneos: Elevation of Privilege:
 
 Un atacante podría modificar sus privilegios para crear torneos.
 
