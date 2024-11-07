@@ -12,6 +12,14 @@
 - [Mostrar-ranking](#Mostrar-ranking)
 - [Amenzas por función:](#Amenzas-por-función:)
 
+- [Amenzas por función:](#Asignar-jueces-Spoofing:)
+
+### 
+### Registrar puntajes - Tampering:
+### Registrar puntajes - Repudiation.
+### Mostrar ranking - Information Disclosure:
+### Inscribir participantes - Denegación de Servicio (DoS): 
+### Crear torneos - Elevation of Privilege:
 
 ## Introducción:
 
@@ -53,7 +61,7 @@
 
 
 ## Amenzas por función.
-### Asignar jueces - Spoofing.
+### Asignar jueces - Spoofing:
 
 Un atacante podría suplantar la identidad de un funcionario autorizado y asignar jueces a un torneo sin autorización
 
@@ -72,7 +80,7 @@ Un atacante podría suplantar la identidad de un funcionario autorizado y asigna
 **Mitigación:** Implementar autenticación de dos factores para los funcionarios y registros de auditoría detallados para todas las asignaciones de jueces. 
 
 
-### Registrar puntajes - Tampering.
+### Registrar puntajes - Tampering:
 
 Un atacante podría alterar los puntajes enviados por la aplicación.
 
@@ -111,25 +119,8 @@ Un juez podría negar que asignó un puntaje a un participante.
 **Mitigación:** Autenticación de jueces utilizando certificados digitales o biometría para garantizar que solo jueces autorizados puedan registrar puntajes.
 Cada acción realizada por los jueces debe registrarse con un identificador único y una marca de tiempo, lo cual permite rastrear quién asignó cada puntaje.
 
-### Inscribir participantes - Denegación de Servicio (DoS): 
-Un atacante podría sobrecargar el sistema de inscripción, impidiendo que los usuarios legítimos completen el proceso.
 
-**Damage (6):** Si el sistema de inscripción queda fuera de servicio, los participantes legítimos no podrán inscribirse, afectando el desarrollo del torneo. Esto impactaría la integridad y la disponibilidad del sistema, aunque el daño directo a los datos es limitado.
-
-**Reproducibility (5):** Un ataque de denegación de servicio puede ser replicado fácilmente si se encuentra un punto débil en la infraestructura o configuración del sistema.
-
-**Exploitability (6):** Dependiendo de la arquitectura y medidas de seguridad, un atacante podría explotar esta vulnerabilidad enviando una gran cantidad de solicitudes de inscripción.
-
-**Affected users (6):** Afecta a todos los participantes y usuarios legítimos que intenten utilizar el sistema de inscripción durante el ataque, ya que el sistema no estará disponible.
-
-**Discoverability (5):** Un ataque DoS suele ser evidente cuando el sistema comienza a tener problemas de rendimiento o queda completamente fuera de servicio, aunque identificar el origen puede ser complicado.
-
-Riesgo total: 28/5 = 5,6
-**Mitigación:** Limitar la cantidad de solicitudes permitidas por usuario en un intervalo de tiempo específico, para prevenir que un solo usuario  realice múltiples solicitudes en un corto período. Implementar un sistema de CAPTCHA en el formulario de inscripción para evitar que bots o scripts automáticos generen múltiples solicitudes de inscripción simultáneamente.
-
-
-
-### Mostrar ranking - Information Disclosure.
+### Mostrar ranking - Information Disclosure:
 
 Un atacante podría obtener acceso no autorizado a los datos del ranking, exponiendo la información de puntajes antes de su publicación oficial.
 
@@ -148,7 +139,26 @@ Un atacante podría obtener acceso no autorizado a los datos del ranking, exponi
 **Mitigación:** Restringir el acceso a los datos del ranking a usuarios autorizados y utilizar cifrado en las comunicaciones y el almacenamiento de datos sensibles. 
 
 
-### Crear torneos - Elevation of Privilege.
+### Inscribir participantes - Denegación de Servicio (DoS): 
+Un atacante podría sobrecargar el sistema de inscripción, impidiendo que los usuarios legítimos completen el proceso.
+
+**Damage (6):** Si el sistema de inscripción queda fuera de servicio, los participantes legítimos no podrán inscribirse, afectando el desarrollo del torneo. Esto impactaría la integridad y la disponibilidad del sistema, aunque el daño directo a los datos es limitado.
+
+**Reproducibility (5):** Un ataque de denegación de servicio puede ser replicado fácilmente si se encuentra un punto débil en la infraestructura o configuración del sistema.
+
+**Exploitability (6):** Dependiendo de la arquitectura y medidas de seguridad, un atacante podría explotar esta vulnerabilidad enviando una gran cantidad de solicitudes de inscripción.
+
+**Affected users (6):** Afecta a todos los participantes y usuarios legítimos que intenten utilizar el sistema de inscripción durante el ataque, ya que el sistema no estará disponible.
+
+**Discoverability (5):** Un ataque DoS suele ser evidente cuando el sistema comienza a tener problemas de rendimiento o queda completamente fuera de servicio, aunque identificar el origen puede ser complicado.
+
+Riesgo total: 28/5 = 5,6
+**Mitigación:** Limitar la cantidad de solicitudes permitidas por usuario en un intervalo de tiempo específico, para prevenir que un solo usuario  realice múltiples solicitudes en un corto período. Implementar un sistema de CAPTCHA en el formulario de inscripción para evitar que bots o scripts automáticos generen múltiples solicitudes de inscripción simultáneamente.
+
+
+
+
+### Crear torneos - Elevation of Privilege:
 
 Un atacante podría modificar sus privilegios para crear torneos.
 
