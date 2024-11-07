@@ -25,6 +25,10 @@
 
 ## Introducción:
 
+Una federación deportiva está comenzando a desarrollar un sistema para registrar las puntuaciones de los torneos.
+A continuación, se presenta un modelo de amenazas de la aplicación, utilizando la metodología STRIDE para identificar amenazas en los componentes, y valorandolas utilizando DREAD.
+También se plantean las mitigaciones correspondientes en forma de requerimiento. 
+
 
 ## Funciones seleccionadas:
 
