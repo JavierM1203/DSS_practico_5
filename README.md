@@ -6,7 +6,7 @@
 - [Funciones seleccionadas:](#Funciones-seleccionadas)
   
 - [Diagrama-de-flujo-de-datos-de-alto-nivel:](#Diagrama-de-flujo-de-datos-de-alto-nivel)
-- 
+  
 - [Diagrama-de-flujo-de-datos-de-segundo-nivel-por-función:](#Diagrama-de-flujo-de-datos-de-segundo-nivel-por-función)
 - [Crear torneos](#Crear-torneos)
 - [Asignar jueces](#Asignar-jueces)
