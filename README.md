@@ -23,7 +23,6 @@
 - [Crear torneos - Elevation of Privilege:](#Crear-torneos-Elevation-of-Privilege)
 
 
-
 ## Introducción:
 
 
@@ -38,7 +37,6 @@
 ## Diagrama de flujo de datos de alto nivel:
 
 ![alt text](images/dfd_alto_nivel.png)
-
 
 ## Diagrama de flujo de datos de segundo nivel por función:
 
@@ -61,7 +59,6 @@
 * ### Mostrar ranking
 
 ![alt text](images/ranking.png)
-
 
 ## Amenzas por función:
 ### Asignar jueces: Spoofing:
